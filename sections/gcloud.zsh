@@ -42,7 +42,8 @@ spaceship_gcloud() {
   local GCLOUD_ACTIVE_PROJECT=$(sed -n 's/project = \(.*\)/\1/p' ${GCLOUD_ACTIVE_CONFIG_FILE})
 
   # Sets the prompt text to `active-config/active-project`
-  SPACESHIP_GCLOUD_TEXT="${GCLOUD_ACTIVE_CONFIG}/${GCLOUD_ACTIVE_PROJECT}"
+  # SPACESHIP_GCLOUD_TEXT="${GCLOUD_ACTIVE_CONFIG}/${GCLOUD_ACTIVE_PROJECT}" # original line
+  SPACESHIP_GCLOUD_TEXT="${GCLOUD_ACTIVE_CONFIG}" # customization by snwfdhmp
 
   # Show prompt section
   spaceship::section \
